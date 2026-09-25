@@ -1,1 +1,922 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#fff}a{text-decoration:none;color:inherit}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #e8edf3;position:sticky;top:0;background:#ffffffee;backdrop-filter:blur(10px);z-index:10}.brand{display:flex;gap:10px;align-items:center}.brand>span{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:#172033;color:#fff;font-weight:800}.brand small{display:block;font-size:9px;letter-spacing:2px;color:#64748b}.nav nav{display:flex;gap:22px}.nav nav a{font-size:14px;color:#64748b}.nav nav a.active,.nav nav a:hover{color:#172033;font-weight:700}.hero{padding:85px 8%;display:grid;grid-template-columns:1.5fr .7fr;gap:60px;min-height:550px;align-items:center;background:linear-gradient(135deg,#f8fafc,#eef4ff)}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;color:#5472a5}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:12px 0}.hero h1 em{font-style:normal;color:#365fa8}.lead{max-width:650px;color:#64748b;font-size:18px;line-height:1.7}.actions{display:flex;gap:12px;margin-top:28px}.btn{display:inline-block;border:0;border-radius:10px;padding:13px 19px;background:#172033;color:#fff;font-weight:700;cursor:pointer}.btn.ghost{background:#fff;color:#172033;border:1px solid #d8e0eb}.heroCard{padding:45px;border:1px solid #dfe6ef;border-radius:25px;background:#fff;box-shadow:0 25px 60px #17203312;text-align:center}.seal{margin:auto;width:110px;height:110px;border-radius:50%;display:grid;place-items:center;border:8px double #365fa8;font-weight:900;color:#365fa8;font-size:24px}.section,main{padding:70px 8%}.tinted{background:#f8fafc}.sectionHead{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.sectionHead h2,.pageHero h1{margin:5px 0;font-size:38px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.infoCard,.step{padding:28px;border:1px solid #e3e9f0;border-radius:18px;background:#fff}.card p,.step p,.twoCol p{color:#64748b;line-height:1.7}.number{font-weight:800;color:#365fa8}.noticeList{display:grid;gap:12px}.notice{padding:20px;border-left:4px solid #365fa8;background:#fff;border-radius:10px}.notice span{float:right;color:#94a3b8;font-size:13px}.notice p{color:#64748b}.pageHero{padding:70px 8%;background:#f1f5f9}.pageHero p{color:#64748b;font-size:17px}.twoCol,.contactGrid{display:grid;grid-template-columns:1.5fr 1fr;gap:30px}.infoCard li{padding:7px 0;color:#475569}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#172033;color:#fff}.contactForm{display:grid;gap:14px}.contactForm input,.contactForm textarea{width:100%;padding:14px;border:1px solid #d8e0eb;border-radius:10px;font:inherit}footer{padding:45px 8%;background:#172033;color:#fff;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}footer p{color:#c5ceda;line-height:1.6}footer small{grid-column:1/-1;color:#94a3b8;margin-top:20px}@media(max-width:800px){.nav{padding:0 5%}.nav nav{gap:9px}.nav nav a{font-size:12px}.hero,.twoCol,.contactGrid{grid-template-columns:1fr}.hero{padding:55px 6%}.section,main{padding:50px 6%}.grid3,.steps{grid-template-columns:1fr}.pageHero{padding:50px 6%}.pageHero h1{font-size:34px}footer{grid-template-columns:1fr}.notice span{float:none;display:block;margin-top:5px}.brand small{display:none}}
+/* MITS Gwalior Official Redesign Stylesheet */
+
+:root {
+  --mits-navy: #0a3871;
+  --mits-navy-dark: #072247;
+  --mits-red: #c62828;
+  --mits-red-hover: #b71c1c;
+  --mits-gold: #f59e0b;
+  --mits-gray-bg: #f4f6f9;
+  --mits-text-dark: #1e293b;
+  --mits-text-muted: #64748b;
+  --mits-border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: var(--mits-text-dark);
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   Top Institutional Header (Bilingual & NAAC Accredited)
+   ========================================================================== */
+.mits-top-header {
+  background: #ffffff;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--mits-navy);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.mits-header-logo-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mits-emblem-svg {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+}
+
+.mits-header-titles {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.mits-title-hindi {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--mits-navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.mits-title-english {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--mits-navy);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.mits-subtitle-deemed {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mits-red);
+  margin-top: 1px;
+}
+
+.mits-subtitle-dept {
+  font-size: 12px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.mits-naac-badge-text {
+  font-size: 13px;
+  font-weight: 800;
+  color: #065f46;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.mits-header-logo-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mits-deemed-logo {
+  width: 70px;
+  height: 70px;
+}
+
+/* ==========================================================================
+   Navigation Bar & Hover Dropdowns
+   ========================================================================== */
+.mits-navbar {
+  background-color: var(--mits-navy);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.mits-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.mits-nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mits-nav-item {
+  position: relative;
+}
+
+.mits-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 14px;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.mits-nav-link:hover,
+.mits-nav-link.active,
+.mits-nav-item:hover > .mits-nav-link {
+  background-color: var(--mits-red);
+  color: #ffffff;
+}
+
+.mits-dropdown-arrow {
+  font-size: 10px;
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.mits-nav-item:hover .mits-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Submenu Dropdown */
+.mits-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 0 0 6px 6px;
+  border-top: 3px solid var(--mits-red);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1100;
+}
+
+.mits-nav-item:hover .mits-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mits-dropdown-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s ease, padding-left 0.15s ease, color 0.15s ease;
+}
+
+.mits-dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+.mits-dropdown-menu li a:hover {
+  background-color: #f8fafc;
+  color: var(--mits-red);
+  padding-left: 24px;
+}
+
+/* ==========================================================================
+   Hero Section & Multi-Image Carousel
+   ========================================================================== */
+.mits-hero-wrapper {
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+  min-height: 480px;
+  max-height: 580px;
+}
+
+.mits-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+.mits-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mits-carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.mits-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92);
+}
+
+/* NAAC Badge Overlay on Slide */
+.mits-naac-overlay-badge {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #b91c1c;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: pulseBadge 3s infinite ease-in-out;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.mits-naac-badge-title {
+  font-size: 10px;
+  font-weight: 800;
+  color: #1e293b;
+  text-transform: uppercase;
+}
+
+.mits-naac-badge-grade {
+  font-size: 26px;
+  font-weight: 900;
+  color: #b91c1c;
+  line-height: 1.1;
+}
+
+.mits-naac-badge-sub {
+  font-size: 11px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+/* Slider Controls */
+.mits-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  width: 44px;
+  height: 54px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.mits-carousel-arrow:hover {
+  background: var(--mits-red);
+}
+
+.mits-carousel-arrow.prev {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.mits-carousel-arrow.next {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.mits-carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+
+.mits-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mits-dot.active {
+  background: var(--mits-red);
+  width: 28px;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   Live Notification Marquee Ticker
+   ========================================================================== */
+.mits-ticker-bar {
+  display: flex;
+  align-items: stretch;
+  background-color: var(--mits-red);
+  color: #ffffff;
+  height: 44px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.mits-ticker-label {
+  background-color: var(--mits-navy);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 13.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.mits-ticker-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.mits-marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+}
+
+.mits-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.mits-marquee-item {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mits-marquee-separator {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Welcome & Vision / Mission / VC Section
+   ========================================================================== */
+.mits-vision-section {
+  padding: 50px 5%;
+  background: var(--mits-gray-bg);
+}
+
+.mits-welcome-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.mits-welcome-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--mits-navy);
+  letter-spacing: 0.5px;
+}
+
+.mits-welcome-header p {
+  font-size: 18px;
+  color: var(--mits-red);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.mits-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Vision Card (Left - Red) */
+.mits-vision-card {
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mits-vision-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mits-quote-mark {
+  font-size: 45px;
+  line-height: 1;
+  font-family: Georgia, serif;
+  opacity: 0.8;
+  margin-bottom: -10px;
+}
+
+.mits-vision-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* VC Center Card */
+.mits-vc-card {
+  background: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.mits-vc-img-frame {
+  width: 150px;
+  height: 175px;
+  border: 4px solid var(--mits-navy);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.mits-vc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mits-vc-card h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--mits-navy);
+}
+
+.mits-vc-card span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mits-red);
+}
+
+/* Mission Card (Right - Dark Slate) */
+.mits-mission-card {
+  background-color: #2d3748;
+  color: #ffffff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mits-mission-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mits-mission-list {
+  list-style: none;
+}
+
+.mits-mission-list li {
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mits-mission-bullet {
+  color: var(--mits-gold);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Highlights Section with Filter Tabs
+   ========================================================================== */
+.mits-highlights-section {
+  padding: 60px 5%;
+  background: #ffffff;
+}
+
+.mits-section-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--mits-navy);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.mits-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--mits-red);
+}
+
+/* Tabs Navigation Bar */
+.mits-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--mits-navy);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.mits-tab-btn {
+  padding: 12px 22px;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.mits-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mits-tab-btn.active {
+  background: var(--mits-red);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Highlights Grid Body */
+.mits-highlights-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.mits-notice-box {
+  border: 1px solid var(--mits-border);
+  border-radius: 6px;
+  padding: 20px;
+  background: #ffffff;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.mits-notice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--mits-border);
+  transition: background 0.15s ease;
+}
+
+.mits-notice-item:last-child {
+  border-bottom: none;
+}
+
+.mits-notice-arrow {
+  color: var(--mits-red);
+  font-weight: 900;
+  font-size: 14px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.mits-notice-details b {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mits-text-dark);
+  display: block;
+  margin-bottom: 4px;
+
+}
+
+.mits-notice-details b:hover {
+  color: var(--mits-red);
+  cursor: pointer;
+}
+
+.mits-notice-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: var(--mits-text-muted);
+}
+
+.mits-notice-cat-badge {
+  background: #eff6ff;
+  color: var(--mits-navy);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Right Campus Preview Image */
+.mits-highlights-image-box {
+  width: 100%;
+  height: 420px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.mits-highlights-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Quick Links Cards Grid
+   ========================================================================== */
+.mits-quickcards-section {
+  padding: 0 5% 60px;
+}
+
+.mits-quickcards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.mits-quick-card {
+  background: linear-gradient(135deg, #f8fafc, #edf2f7);
+  border: 1px solid var(--mits-border);
+  border-radius: 8px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.mits-quick-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(10, 56, 113, 0.12);
+  border-color: var(--mits-navy);
+}
+
+.mits-quick-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--mits-navy);
+  margin-bottom: 10px;
+}
+
+.mits-quick-card p {
+  font-size: 13.5px;
+  color: var(--mits-text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Floating Social Bar & Quick Access Widget
+   ========================================================================== */
+.mits-floating-socials {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.mits-social-icon {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s ease, width 0.2s ease;
+}
+
+.mits-social-icon:hover {
+  transform: translateX(-4px);
+  width: 44px;
+}
+
+.mits-social-icon.fb { background: #1877f2; }
+.mits-social-icon.tw { background: #1da1f2; }
+.mits-social-icon.li { background: #0a66c2; }
+.mits-social-icon.yt { background: #ff0000; }
+.mits-social-icon.ig { background: #e4405f; }
+
+.mits-floating-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  z-index: 2000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00bcd4;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.4);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.mits-floating-widget:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+.mits-footer {
+  background-color: var(--mits-navy-dark);
+  color: #ffffff;
+  padding: 50px 5% 20px;
+}
+
+.mits-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto 40px;
+}
+
+.mits-footer-col h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--mits-red);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.mits-footer-col p {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.mits-footer-links {
+  list-style: none;
+}
+
+.mits-footer-links li {
+  margin-bottom: 10px;
+}
+
+.mits-footer-links a {
+  color: #cbd5e1;
+  font-size: 13.5px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mits-footer-links a:hover {
+  color: var(--mits-gold);
+  padding-left: 5px;
+}
+
+.mits-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Page Content Container for subroutes */
+.mits-page-container {
+  padding: 50px 8%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.mits-page-hero {
+  background: var(--mits-navy);
+  color: #ffffff;
+  padding: 40px 8%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+}
+
+.mits-page-hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.mits-page-hero p {
+  color: #93c5fd;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .mits-top-header { flex-direction: column; text-align: center; gap: 15px; }
+  .mits-header-titles { padding: 0; }
+  .mits-nav-container { overflow-x: auto; }
+  .mits-vm-grid { grid-template-columns: 1fr; }
+  .mits-highlights-grid { grid-template-columns: 1fr; }
+  .mits-quickcards-grid { grid-template-columns: 1fr; }
+  .mits-footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .mits-title-hindi { font-size: 17px; }
+  .mits-title-english { font-size: 15px; }
+  .mits-carousel-container { height: 320px; }
+  .mits-naac-overlay-badge { width: 90px; height: 90px; top: 10px; right: 10px; }
+  .mits-naac-badge-grade { font-size: 18px; }
+  .mits-footer-grid { grid-template-columns: 1fr; }
+}
