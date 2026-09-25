@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <p class="subtitle">INTERACTIVE LEARNING DASHBOARD</p>
+            <h1>Quiz & Weather Dashboard</h1>
+            <p class="header-description">Test your knowledge and explore real-time weather information.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="start-card" id="start-screen">
+            <h2>Ready for the Quiz?</h2>
+            <p>Test your knowledge with these simple questions.</p>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </section>
+
+        <section class="quiz-card hidden" id="quiz-screen">
+            <div class="quiz-heading">
+                <div>
+                    <span class="small-title">CURRENT QUIZ</span>
+                    <h2>Test Your Knowledge</h2>
+                </div>
+                <div class="timer">Time: <span id="timer">15</span>s</div>
+            </div>
+
+            <div class="quiz-info">
+                <span id="question-count">Question 1 of 5</span>
+                <span>Score: <b id="score">0</b></span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar">
+                </div>
+            </div>
+            <h3 id="question">Question goes here</h3>
+            <div id="options" class="options"></div>
+
+            <button id="next-btn" class="btn next-btn">Next Question</button>
+        </section>
+
+        <section id="result-screen" class="result-card hidden">
+            <h2>Quiz Completed!</h2>
+            <p>Well done, <span id="result-name"></span></p>
+            <div class="final-score">
+                <span id="final-score">0</span>/5
+            </div>
+            <button id="restart-btn" class="btn">Play Again</button>
+        </section>
+
+        <section class="bottom-grid">
+            <div class="leaderboard-card">
+                <span class="small-title">TOP SCORES</span>
+                <h2>Leaderboard</h2>
+                <p class="description">See who performed the best.</p>
+                <div id="leaderboard" class="leaderboard"></div>
+            </div>
+
+            <div class="weather-section">
+                <span class="small-title">LIVE WEATHER</span>
+                <h2>Weather</h2>
+                <p class="description">Check the current weather of a city.</p>
+
+                <div class="weather-search">
+                    <input type="text" id="city-input" placeholder="Enter city name">
+                    <button id="weather-btn" class="btn">Search</button>
+                </div>
+
+                <div id="weather-container" class="weather-container">
+                    <p>Search for a city to see weather.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Quiz & Weather Dashboard</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
